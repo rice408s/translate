@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "划词翻译",
+  "version": "1.0",
+  "description": "百度翻译API划词翻译工具",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://fanyi-api.baidu.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["md5.js", "content.js"]
+    }
+  ]
+} 
